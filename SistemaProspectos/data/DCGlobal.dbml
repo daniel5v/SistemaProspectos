@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaProspectos" Class="DCGlobalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-F4BNPSA;Initial Catalog=SistemaProspectos;Persist Security Info=True;User ID=sa;Encrypt=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SistemaProspectosConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Prospecto" Member="Prospecto">
+    <Type Name="Prospecto">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_paterno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="apellido_materno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="calle" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="colonia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_postal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="rfc" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="id_status_prospecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="observacion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="Prospecto_DocumentosProspecto" Member="DocumentosProspecto" ThisKey="id" OtherKey="id_prospecto" Type="DocumentosProspecto" />
+      <Association Name="StatusProspecto_Prospecto" Member="StatusProspecto" ThisKey="id_status_prospecto" OtherKey="id" Type="StatusProspecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatusProspecto" Member="StatusProspecto">
+    <Type Name="StatusProspecto">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="valor" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="StatusProspecto_Prospecto" Member="Prospecto" ThisKey="id" OtherKey="id_status_prospecto" Type="Prospecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentosProspecto" Member="DocumentosProspecto">
+    <Type Name="DocumentosProspecto">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_prospecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_documento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ext" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ruta" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="Prospecto_DocumentosProspecto" Member="Prospecto" ThisKey="id_prospecto" OtherKey="id" Type="Prospecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

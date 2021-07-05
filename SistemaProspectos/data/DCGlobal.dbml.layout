@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DCGlobal">
+  <DataContextMoniker Name="/DCGlobalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d4162a05-f42e-4977-8560-dd7af3e45e87" absoluteBounds="3.5, 1, 2, 3.1170068359375009">
+      <DataClassMoniker Name="/DCGlobalDataContext/Prospecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e22152e2-b40c-45cf-9cb0-c5eca6812518" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f7bb14c-146b-4b8a-b21f-2229b3f7080e" absoluteBounds="0.75, 2, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DCGlobalDataContext/StatusProspecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b41b4e3d-e37d-432c-8695-263f9db0835b" absoluteBounds="0.765, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.59699625651042); (3.5 : 2.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DCGlobalDataContext/StatusProspecto/StatusProspecto_Prospecto" />
+      <nodes>
+        <classShapeMoniker Id="3f7bb14c-146b-4b8a-b21f-2229b3f7080e" />
+        <classShapeMoniker Id="d4162a05-f42e-4977-8560-dd7af3e45e87" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6e7466ce-4986-4163-8278-4058313fce54" absoluteBounds="7.75, 2.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DCGlobalDataContext/DocumentosProspecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6d1437c-026f-4b08-8e75-9cff3e213d9c" absoluteBounds="7.765, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.30850341796875); (7.75 : 3.30850341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DCGlobalDataContext/Prospecto/Prospecto_DocumentosProspecto" />
+      <nodes>
+        <classShapeMoniker Id="d4162a05-f42e-4977-8560-dd7af3e45e87" />
+        <classShapeMoniker Id="6e7466ce-4986-4163-8278-4058313fce54" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

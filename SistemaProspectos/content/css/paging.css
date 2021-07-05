@@ -1,0 +1,59 @@
+﻿.table-paging {    
+    padding-left: 0;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.table-paging table > tbody > tr > td {
+    display: inline;
+}
+
+.table-paging table > tbody > tr > td > a,
+.table-paging table > tbody > tr > td > span {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0d6efd;
+    /*border: 1px solid #304a6e;*/
+    margin-left: -1px;
+}
+
+.table-paging table > tbody > tr > td > span {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;    
+    margin-left: -1px;
+    z-index: 2;
+    color: #0d6efd;
+    font-weight: bold;
+    background-color: #ffffff;
+    /*border-color: #304a6e;*/
+    cursor: pointer;
+}
+
+.table-paging table > tbody > tr > td:first-child > a,
+.table-paging table > tbody > tr > td:first-child > span {
+    margin-left: 0;
+    /*border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;*/
+}
+
+.table-paging table > tbody > tr > td:last-child > a,
+.table-paging table > tbody > tr > td:last-child > span {
+    /*border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;*/
+}
+
+.table-paging table > tbody > tr > td > a:hover,
+.table-paging table > tbody > tr > td > span:hover,
+.table-paging table > tbody > tr > td > a:focus,
+.table-paging table > tbody > tr > td > span:focus {
+    color: #ffffff;
+    background-color: #0b57c6;
+    /*border-color: #304a6e;*/
+}
