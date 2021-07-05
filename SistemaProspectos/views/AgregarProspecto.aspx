@@ -4,6 +4,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
+        <div class="row mb-3">
+            <div class="col text-lg-start text-sm-center">
+                <hr />
+                <h5 class="text-primary">Nuevo prospecto</h5>
+            </div>            
+        </div>
+
         <div class="row">
             <p class="text-primary pl-6">Información Prospecto</p>
         </div>

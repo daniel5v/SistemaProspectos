@@ -10,6 +10,7 @@
         <ContentTemplate>
             <div class="container p-3">
                 <div class="row mb-3">
+                    <hr />
                     <div class="col-lg-6 col-sm-12 text-lg-start text-sm-center">
                         <h5 class="text-primary">Lista de Prospectos</h5>
                     </div>
