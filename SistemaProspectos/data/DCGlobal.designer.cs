@@ -42,7 +42,7 @@ namespace SistemaProspectos.data
     #endregion
 		
 		public DCGlobalDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaProspectosPublish"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaProspectosConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
